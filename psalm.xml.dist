@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<psalm
+    allowPhpStormGenerics="true"
+    checkForThrowsDocblock="true"
+    checkForThrowsInGlobalScope="true"
+    ensureArrayStringOffsetsExist="true"
+    errorLevel="1"
+    findUnusedPsalmSuppress="true"
+    reportMixedIssues="true"
+    resolveFromConfigFile="true"
+    sealAllMethods="true"
+    skipChecksOnUnresolvableIncludes="false"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+>
+    <plugins>
+        <pluginClass class="Psalm\PhpUnitPlugin\Plugin"/>
+    </plugins>
+
+    <projectFiles>
+        <directory name="src"/>
+        <directory name="tests"/>
+        <ignoreFiles>
+            <directory name="vendor"/>
+        </ignoreFiles>
+    </projectFiles>
+
+    <issueHandlers>
+        <DeprecatedClass errorLevel="info"/>
+        <DeprecatedConstant errorLevel="info"/>
+        <DeprecatedFunction errorLevel="info"/>
+        <DeprecatedInterface errorLevel="info"/>
+        <DeprecatedMethod errorLevel="info"/>
+        <DeprecatedProperty errorLevel="info"/>
+        <DeprecatedTrait errorLevel="info"/>
+        <MixedAssignment errorLevel="suppress"/>
+        <InvalidCatch>
+            <errorLevel type="suppress">
+                <referencedClass name="Psr\Container\NotFoundExceptionInterface"/>
+            </errorLevel>
+        </InvalidCatch>
+    </issueHandlers>
+
+    <ignoreExceptions>
+        <classAndDescendants name="Error"/>
+        <classAndDescendants name="LogicException"/>
+        <classAndDescendants name="RuntimeException"/>
+        <classAndDescendants name="Psr\Container\ContainerExceptionInterface"/>
+    </ignoreExceptions>
+</psalm>

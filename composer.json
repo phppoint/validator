@@ -1,0 +1,46 @@
+{
+    "name": "phpyh/validator",
+    "description": "Mother's friend's son's validator",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Valentin Udaltsov",
+            "email": "udaltsov.valentin@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || 8.*",
+        "psr/container": "^1.0",
+        "symfony/polyfill-php80": "^1.18"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "icanhazstring/composer-unused": "^0.7.4",
+        "maglnet/composer-require-checker": "^2.1",
+        "phpunit/phpunit": "^9.3",
+        "psalm/plugin-phpunit": "^0.12.2",
+        "vimeo/psalm": "^3.16"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPyh\\Validator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PHPyh\\Validator\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        },
+        "unused": [
+            "symfony/polyfill-php80"
+        ]
+    }
+}
