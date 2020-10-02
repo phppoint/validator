@@ -1,5 +1,5 @@
 # PHPyh Validator
-«Валидатор сына маминой подруги», — Роман Пронский.
+[«Валидатор сына маминой подруги», — Роман Пронский.](https://youtu.be/liMyAuxIoyM?t=5491)
 
 ![alt text](refactoring.jpg)
 
@@ -31,3 +31,6 @@ $errors = $validator->validate(
     ])
 );
 ```
+
+## References
+- [My explanations of the architecture in Russian](https://youtu.be/liMyAuxIoyM?t=4308)
